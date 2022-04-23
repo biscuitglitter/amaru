@@ -2,10 +2,10 @@ import React from "react"
 
 const Shoe = () => {
   return (
-    <div className="flex flex-column justify-center items-center" style={{ width: "270px" }}>
+    <div id="shoe" className="flex flex-column justify-center items-center">
     <div className="">
       <div style={{ width: "230px", height: "160px" }} className="mb-3.5">
-        <img className="border-transparent rounded-t-2xl rounded-b"
+        <img className="border-transparent rounded-t-2xl rounded-b" alt="legend-academy"
           src="https://raw.githubusercontent.com/css-for-js/sole-and-ankle/main/public/assets/legend-academy.jpg"></img>
       </div>
       <div style={{ height: "20px" }}>

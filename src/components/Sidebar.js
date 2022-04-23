@@ -2,7 +2,7 @@ import React from "react"
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-column justify-start cursor-pointer font-black" style={{ width: "250px", height: "420px", fontSize: "14px" }}>
+    <div className="flex flex-column justify-start cursor-pointer font-black" style={{ width: "150px", height: "420px", fontSize: "14px" }}>
       <ul>
       {[
           ["Lifestyle", "/lifestyle"],
@@ -16,7 +16,7 @@ const Sidebar = () => {
           ["Golf", "/golf"],
           ["Football", "/football"],
         ].map(([title, url]) => (
-          <li key={title.toString()} className="py-0.5 hover:text-pink-500" href={url}>{title}</li>
+          <li key={title.toString()} className="py-1.5 hover:text-pink-500" href={url}>{title}</li>
         ))}
       </ul>
     </div>

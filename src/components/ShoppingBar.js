@@ -3,11 +3,11 @@ import SelectMenu from "./SelectMenu"
 
 const ShoppingBar = () => {
   return (
-    <div className="flex flex-row justify-between align-center" style={{width: "700px", height: "50px"}}>
+    <div className="flex flex-row justify-between items-center" style={{width: "100%", height: "50px"}}>
       <div className="left">
-      <div className="text-xl text-grey-900 leading-6 font-black">Running</div>         
+      <div className="text-xl text-grey-900 leading-6 font-black mx-6">Running</div>         
       </div>
-      <div className="right flex flex-row justify-between align-center gap-1.5" style={{width: "250px"}}>
+      <div className="right flex flex-row justify-between align-center gap-1.5">
         <button className="font-extrabold pb-3.5 text-sm" style={{width: "40px"}}>Sort</button>
         <SelectMenu />
       </div>

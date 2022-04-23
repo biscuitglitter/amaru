@@ -3,7 +3,7 @@ import SelectMenu from "./SelectMenu"
 
 const ShoppingBar = () => {
   return (
-    <div className="flex flex-row justify-between align-center" style={{width: "920px", height: "50px"}}>
+    <div className="flex flex-row justify-between align-center" style={{width: "700px", height: "50px"}}>
       <div className="left">
       <div className="text-xl text-grey-900 leading-6 font-black">Running</div>         
       </div>

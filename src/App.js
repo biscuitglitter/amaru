@@ -1,13 +1,13 @@
 import React from "react"
 import SuperHeader from "./components/SuperHeader"
-import Header from "./components/Header"
+import MainHeader from "./components/MainHeader"
 import MainContent from "./components/MainContent"
 
 const App = () => {
   return (
     <div>
       <SuperHeader />
-      <Header />
+      <MainHeader />
       <MainContent />
     </div>
   )

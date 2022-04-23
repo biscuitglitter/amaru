@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/amaru/static/css/main.4d0c5c4a.css",
+    "main.js": "/amaru/static/js/main.eaf393a8.js",
+    "index.html": "/amaru/index.html",
+    "main.4d0c5c4a.css.map": "/amaru/static/css/main.4d0c5c4a.css.map",
+    "main.eaf393a8.js.map": "/amaru/static/js/main.eaf393a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d0c5c4a.css",
+    "static/js/main.eaf393a8.js"
+  ]
+}

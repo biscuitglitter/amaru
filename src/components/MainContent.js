@@ -6,7 +6,7 @@ import ShoeGrid from "./ShoeGrid"
 const MainContent = () => {
   return (
     <div className="flex flex-row">
-      <div className="px-8 pt-36 pr-0	flex flex-row" >
+      <div className="px-8 pt-16 pr-0	flex flex-row" >
         <Sidebar />
       </div>
       <div className="flex flex-column" style={{height: "900px"}}>
@@ -22,3 +22,4 @@ const MainContent = () => {
 }
 
 export default MainContent 
+

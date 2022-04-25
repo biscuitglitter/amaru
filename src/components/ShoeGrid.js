@@ -21,8 +21,8 @@ const ShoeGrid = () => {
 
   return (
     <div className="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-8">
-      {imageUrls.map((url) => {
-          return <Shoe key={uuidv4()} url={url}/>
+      {imageUrls.slice(0, 12).map((url) => {
+          return <Shoe key={uuidv4()} url={url} />
         }
 )}
     </div>

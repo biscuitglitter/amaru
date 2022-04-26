@@ -1,30 +1,25 @@
 import React, { useState, useEffect } from "react"
-import { storage } from "../firebase-config"
-import { listAll, ref, getDownloadURL } from "firebase/storage"
+import { db } from "../firebase-config"
 import Shoe from "./Shoe"
 import { v4 as uuidv4 } from "uuid"
+import { collection, getDocs } from "firebase/firestore"
 
 const ShoeGrid = () => {
-  const imagesListRef = ref(storage, "shoes/")
-  const [imageUrls, setImageUrls] = useState([])
+
+  const shoesCollec = collection(db, "shoesdetails")
+  const [shoesArray, setShoesArray] = useState([])
 
   useEffect(() => {
-    listAll(imagesListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImageUrls((prev) => [...prev, url])
-        })
-      })
-    })
+    const getArrays = async () => {
+      const data = await getDocs(shoesCollec)
+      setShoesArray(data.docs.map((doc) => ({ ...doc.data() })))
+      console.log(shoesArray)
+    }
+    getArrays()
   }, [])
-
 
   return (
     <div className="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-8">
-      {imageUrls.slice(0, 12).map((url) => {
-          return <Shoe key={uuidv4()} url={url} />
-        }
-)}
     </div>
   )
 }

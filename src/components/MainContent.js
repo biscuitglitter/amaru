@@ -10,7 +10,7 @@ const MainContent = () => {
         <Sidebar />
       </div>
       <div className="flex flex-column" style={{height: "900px"}}>
-        <div className="px-4 pt-12">
+        <div className="px-14 pt-12">
           <ShoppingBar />
           <div className="px-0 pt-12" style={{minWidth: "1000px"}}>
             <ShoeGrid />

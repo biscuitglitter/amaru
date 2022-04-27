@@ -1,32 +1,24 @@
 import React, { useState, useEffect } from "react"
 import { db } from "../firebase-config"
+import { onSnapshot, doc } from "firebase/firestore"
 import Shoe from "./Shoe"
 import { v4 as uuidv4 } from "uuid"
-import { onSnapshot, doc } from "firebase/firestore"
 
 const ShoeGrid = () => {
   const [shoes, setShoes] = useState([])
-  const docRef = doc(db, "shoesdetails", "JYEKETVDiu4hV0WbmJ1m")
+  const docRef = doc(db, "shoesdetails", "yYMa3pvIT2QEtseSY8vi")
 
   useEffect(() => {
     onSnapshot(docRef, (doc) => {
       setShoes(doc.data())
     })
-  })
-
-  useEffect(() => {
-    console.log(shoes)
-    for (const obj in shoes) {
-      console.log(Object.keys(obj))
-    }
-    
   }, [])
 
   return (
     <div className="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-8">
-      {/* {imageUrls.slice(0, 12).map((url) => {
-          return <Shoe key={uuidv4()} url={url} />
-        } */}
+      {shoes.shoelist !== undefined ? shoes.shoelist.map((shoe) => {
+        return <Shoe key={uuidv4()} shoe={shoe} />
+      }) : ""}
     </div>
   )
 }

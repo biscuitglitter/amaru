@@ -13,7 +13,7 @@ const MainContent = () => {
         <div className="px-20 pt-12">
           <ShoppingBar />
           <div className="px-0 pt-12" style={{minWidth: "800px"}}>
-            <ShoeGrid />
+          <ShoeGrid />
             </div>
         </div>
       </div>      

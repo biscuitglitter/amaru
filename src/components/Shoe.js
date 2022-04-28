@@ -7,8 +7,8 @@ const Shoe = ({shoe}) => {
   return (
     <div key={uuidv4()} className="flex flex-column justify-center items-center leading-5 mx-2.5">
     <div className="">
-      <div style={{ width: "270px", height: "170px" }} className="mb-3.5">
-      <img src={shoe.url} className="border-transparent rounded-t-2xl rounded-b"></img>
+      <div style={{ width: "220px", height: "170px" }} className="mb-3.5">
+      <img alt={shoe.name} src={shoe.url} className="border-transparent rounded-t-2xl rounded-b"></img>
       </div>
       <div style={{ height: "20px", fontSize: "14px", lineHeight: "20px"}}>
         <div className={sectionStyle}>

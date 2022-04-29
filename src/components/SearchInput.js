@@ -1,9 +1,26 @@
-import React from "react"
+import React, { useEffect, useContext } from "react"
+import { ViewContext } from "./context/ViewContext"
 
 const SearchInput = () => {
+    const { searchTerm, setSearchTerm, setUpdatedValue, updatedValue } = useContext(ViewContext)
+
+    const handleChange = (e) => {
+        setSearchTerm(e.currentTarget.value)
+    }
+
+    const handleSubmit = () => {
+        setUpdatedValue(searchTerm)
+    }
+ 
+    useEffect(() => {
+    }, [updatedValue])
+
     return (
         <div className="h-6">
-            <input type="text" className="ml-10 font-bold text-sm border-0 border-b bg-gray-800 text-white placeholder-gray-400 outline-none" placeholder="Search..." />
+            <form>
+                <input type="text" className=" font-bold text-sm border-0 border-b bg-gray-800 text-white placeholder-gray-400 outline-none" onChange={handleChange} placeholder="Search..." />
+                <button className="text-sm" onSubmit={handleSubmit}>Search</button>
+            </form>
         </div>
 
     )

@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useContext } from "react"
+import React, { useEffect, useContext } from "react"
+import { ViewContext } from "./context/ViewContext"
 
 const SelectMenu = () => {
-  const [clicked, setClicked] = useState([])
+  const { setSelected } = useContext(ViewContext)
 
-  const handleClick = () => {
-    console.log("on select")
+  const handleChange = (e) => {
+    setSelected(e.currentTarget.value)
   }
 
   return (
     <label className="text-gray-700 text-xs mr-3" htmlFor="choices">
-    <select onClick={handleClick} style={{width: "190px", fontSize: "14.2px", lineHeight: "18.78px"}} className="block py-2 px-3 border-none rounded-md shadow-sm focus:outline-none font-black cursor-pointer mb-3 bg-gray-100">
+    <select style={{width: "190px", fontSize: "14.2px", lineHeight: "18.78px"}} onChange={handleChange} className="block py-2 px-3 border-none rounded-md shadow-sm focus:outline-none font-black cursor-pointer mb-3 bg-gray-100">
     {[
     ["all", "All"],
     ["newestreleases", "Newest releases"],    

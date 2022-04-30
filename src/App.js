@@ -4,7 +4,8 @@ import MainHeader from "./components/MainHeader"
 import MainContent from "./components/MainContent"
 import { ViewContext } from "./components/context/ViewContext"
 
-const App = () => {
+
+const App = () => {  
   const [selected, setSelected] = useState("all")
   const [searchTerm, setSearchTerm] = useState("")
   const [updatedValue, setUpdatedValue] = useState("")
@@ -21,3 +22,4 @@ const App = () => {
 }
 
 export default App
+

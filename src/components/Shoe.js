@@ -12,7 +12,7 @@ const Shoe = ({ shoe }) => {
         <div style={{ width: "215px", height: "170px" }} className="mb-3.5 group">
           <div className="group flex row justify-center">
             <AddItem />
-            <div className="flex row justify-end absolute z-50 text-white font-black mt-0.5" style={{width: "200px", height: "30px", fontSize: "13px"}}>{ shoe.tag === undefined ? "" : <Tag shoe={shoe} /> }</div>
+            <div className="flex row justify-end items-center absolute z-50 text-white font-bold mt-0.5" style={{width: "200px", height: "20px", fontSize: "12px"}}>{ shoe.tag === undefined ? "" : <Tag shoe={shoe} /> }</div>
           </div>
           <img alt={shoe.name} src={shoe.url} className="border-transparent rounded-t-2xl rounded-b"></img>
         </div>

@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid"
 const ShoeGrid = () => {
   const docRef = doc(db, "shoesdetails", "yYMa3pvIT2QEtseSY8vi")
 
-  const { selected, searchTerm } = useContext(ViewContext)
+  const { selected, updatedValue } = useContext(ViewContext)
 
   const [shoes, setShoes] = useState([])  
   const [justReleased, setJustReleased] = useState([])
@@ -32,6 +32,15 @@ const ShoeGrid = () => {
       shoe.tag ? filterTags(shoe) : ""
       }) : ""
   }, [selected])
+
+  useEffect(() => {
+    if (updatedValue !== "") {
+      shoes.shoelist.filter((shoe) => {
+        shoe.name.toString().toLowerCase().includes(updatedValue) ? console.log(shoe.name) : ""
+        }
+       )
+    }
+  }, [updatedValue])
   
   return (
     <div className="grid grid-cols-4 grid-rows-3 gap-x-10 gap-y-10">

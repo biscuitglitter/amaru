@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import SuperHeader from "./components/SuperHeader"
 import MainHeader from "./components/MainHeader"
 import MainContent from "./components/MainContent"
@@ -11,12 +11,11 @@ const App = () => {
 
   return (
     <div>
-      <ViewContext.Provider value={{ selected, searchTerm, setSearchTerm, setUpdatedValue, setSelected }}>
+      <ViewContext.Provider value={{ updatedValue, selected, searchTerm, setSearchTerm, setUpdatedValue, setSelected }}>
         <SuperHeader />
         <MainHeader />
         <MainContent />
       </ViewContext.Provider>
-
     </div>
   )
 }

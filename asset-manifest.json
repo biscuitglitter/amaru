@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/amaru/static/css/main.f1126b65.css",
-    "main.js": "/amaru/static/js/main.663111f7.js",
+    "main.css": "/amaru/static/css/main.cb7066f0.css",
+    "main.js": "/amaru/static/js/main.cf5cc309.js",
     "index.html": "/amaru/index.html",
-    "main.f1126b65.css.map": "/amaru/static/css/main.f1126b65.css.map",
-    "main.663111f7.js.map": "/amaru/static/js/main.663111f7.js.map"
+    "main.cb7066f0.css.map": "/amaru/static/css/main.cb7066f0.css.map",
+    "main.cf5cc309.js.map": "/amaru/static/js/main.cf5cc309.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1126b65.css",
-    "static/js/main.663111f7.js"
+    "static/css/main.cb7066f0.css",
+    "static/js/main.cf5cc309.js"
   ]
 }

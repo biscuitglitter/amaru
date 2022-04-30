@@ -2,7 +2,7 @@ import React from "react"
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-column justify-start cursor-pointer font-black" style={{ width: "150px", height: "420px", fontSize: "14px" }}>
+    <div className="flex column cursor-pointer font-black" style={{ height: "420px", fontSize: "14px" }}>
       <ul>
       {[
           ["Lifestyle", "/lifestyle"],

@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
+import { TitleContext } from "./context/TitleContext"
 
 const Sidebar = () => {
+  const { setSelectedTitle } = useContext(TitleContext)
   return (
     <div className="flex column cursor-pointer font-black" style={{ height: "420px", fontSize: "14px" }}>
       <ul>
-      {[
+        {[
           ["Lifestyle", "/lifestyle"],
           ["Running", "/running"],
           ["Training", "/training"],
@@ -16,7 +18,7 @@ const Sidebar = () => {
           ["Golf", "/golf"],
           ["Football", "/football"],
         ].map(([title, url]) => (
-          <li key={title.toString()} className="py-1.5 hover:text-pink-500" href={url}>{title}</li>
+          <li onClick={(e) => setSelectedTitle(e.currentTarget.innerText)} key={title.toString()} value={title} className="py-1.5 hover:text-pink-500" href={url}>{title}</li>
         ))}
       </ul>
     </div>

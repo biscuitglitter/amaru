@@ -1,15 +1,17 @@
 import React, { useContext, useState, useEffect } from "react"
 import { ViewContext } from "./context/ViewContext"
+import { TitleContext } from "./context/TitleContext"
 import { db } from "../firebase-config"
 import { onSnapshot, doc } from "firebase/firestore"
 import Shoe from "./Shoe"
 import { v4 as uuidv4 } from "uuid"
-import _, { set } from 'lodash'
+import _ from 'lodash'
 
 const ShoeGrid = () => {
   const docRef = doc(db, "shoesdetails", "yYMa3pvIT2QEtseSY8vi")
 
   const { selected, updatedValue } = useContext(ViewContext)
+  const { selectedTitle } = useContext(TitleContext)
 
   const [shoes, setShoes] = useState([])
   const [justReleased, setJustReleased] = useState([])
@@ -45,7 +47,7 @@ const ShoeGrid = () => {
     }
   }, [updatedValue])
 
-  if (updatedValue == "")
+  if (updatedValue == "" && selectedTitle === "Running")
     return (
       <div className="grid grid-cols-4 grid-rows-3 gap-x-10 gap-y-10">
         {selected === "all" && shoes.shoelist !== undefined ? _.shuffle(shoes.shoelist).map((shoe) => {
@@ -66,6 +68,12 @@ const ShoeGrid = () => {
           return <Shoe key={uuidv4()} shoe={shoe} />
         })}
       </div>
+    )
+  if (selectedTitle !== "Running") 
+    return (
+        <div className="flex row justify-center items-center font-black">
+          <p>{`Here you'll find all the ${selectedTitle} shoes`}</p>
+        </div>
     )
 }
 

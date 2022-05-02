@@ -2,7 +2,7 @@ import React from "react"
 
 const MainHeader = () => {
   return (
-    <header className="flex flex-row justify-between h-16 bg-white border-0 border-b border-gray-300 py-5 items-center" style={{width: "100%"}}>
+    <header className="flex flex-row justify-between h-16 bg-white border-0 border-b border-gray-300 py-5 items-center pointer-events-none" style={{width: "100%"}}>
       <div className="flex-1">
         <div className="logo w-36 text-3xl ml-16 mr-2 font-black pb-1">Amaru</div>
       </div>

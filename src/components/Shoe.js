@@ -1,6 +1,5 @@
 import React from "react"
 import { v4 as uuidv4 } from "uuid"
-import AddItem from "./AddItem"
 import Tag from "./Tag"
 
 const sectionStyle = "flex flex-column gap-2 font-black justify-between items-center"
@@ -11,7 +10,6 @@ const Shoe = ({ shoe }) => {
       <div className="cursor-pointer">
         <div style={{ width: "215px", height: "170px" }} className="mb-3.5 group">
           <div className="group flex row justify-center">
-            <AddItem />
             <div className="flex row justify-end items-center absolute z-50 text-white font-bold mt-0.5" style={{width: "200px", height: "20px", fontSize: "12px"}}>{ shoe.tag === undefined ? "" : <Tag shoe={shoe} /> }</div>
           </div>
           <img alt={shoe.name} src={shoe.url} className="border-transparent rounded-t-2xl rounded-b"></img>
